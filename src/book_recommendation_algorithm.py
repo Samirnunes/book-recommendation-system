@@ -6,7 +6,7 @@ from book_recommendation_k_nearest import BookRecommendationKNearest
 
 class BookRecommendationAlgorithm:
     def __init__(self):
-        self.recommendations_path = "./data/recommendations.csv"
+        self.recommendations_path = "../data/recommendations.csv"
         self.df_books = None
         self.df_users_already_read = None
 

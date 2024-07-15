@@ -3,10 +3,10 @@ import pandas as pd
 from book_recommendation_preprocessor import BookRecommendationPreprocessor
 
 def import_final_data():
-    X_path = './data/X_train.csv'
-    df_main_path = './data/df_main.csv'
-    df_books_path = './data/df_books.csv'
-    df_users_already_read_path = './data/df_users_already_read.csv'
+    X_path = '../data/X_train.csv'
+    df_main_path = '../data/df_main.csv'
+    df_books_path = '../data/df_books.csv'
+    df_users_already_read_path = '../data/df_users_already_read.csv'
     if (os.path.isfile(X_path) and
             os.path.isfile(df_main_path) and
             os.path.isfile(df_books_path) and
@@ -29,8 +29,8 @@ def import_final_data():
 
 
 def import_books_ratings_users():
-    books = pd.read_csv("data/books.csv", sep=";", encoding="latin-1", low_memory=False, on_bad_lines='skip').drop(
+    books = pd.read_csv("../data/books.csv", sep=";", encoding="latin-1", low_memory=False, on_bad_lines='skip').drop(
         ["Image-URL-S", "Image-URL-M", "Image-URL-L"], axis=1)
-    ratings = pd.read_csv("data/ratings.csv", sep=";", encoding="latin-1", low_memory=False, on_bad_lines='skip')
-    users = pd.read_csv("data/users.csv", sep=";", encoding="latin-1", low_memory=False, on_bad_lines='skip')
+    ratings = pd.read_csv("../data/ratings.csv", sep=";", encoding="latin-1", low_memory=False, on_bad_lines='skip')
+    users = pd.read_csv("../data/users.csv", sep=";", encoding="latin-1", low_memory=False, on_bad_lines='skip')
     return books, ratings, users
